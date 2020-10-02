@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Home</h1>
+        <input id="usuario" placeholder="un numero del 1 al 10">
+        <button onclick="buscar()">buscar</button>
+        <table id="respuesta">
+            <thead>
+            <th>Id</th>
+            <th>Nombre de Usuario</th>
+            <th>Email</th>
+            <th>Website</th>
+            </thead>
+        <tbody id="respuesta_body">
+        </tbody>
+        </table>
+    </body>
+    <script>
+        function buscar(){
+            let usuario = $('#usuario').val()
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users/"+usuario
+                }).done(function(data) {
+                    let tr = '<tr>'+
+                    '<td>' + data.id + '</td>' +
+                    '<td>' + data.username + '</td>' +
+                    '<td>' + data.email +   '   </td>' +
+                    '<td>' + data.website + '</td>' +
+                    '</tr>'
+                    $('#respuesta_body')
+                        .append(tr)
+                });
+            return usuario;
+        }
+        describe('Validar usuario',()=>{
+            it('Valida usuario',()=>{
+                const result=buscar();
+                expect(result).toBe(1);
+            });
+        })
+    </script>
+</html>
