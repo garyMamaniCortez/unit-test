@@ -1,0 +1,22 @@
+{
+  "name": "featuresb-res-10-3",
+  "version": "1.0.0",
+  "description": "Muestra usuarios usando un fake Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garyMamaniCortez/featureSB-RES-10-3.git"
+  },
+  "author": "Jhonny Gary Mamani Cortez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garyMamaniCortez/featureSB-RES-10-3/issues"
+  },
+  "homepage": "https://github.com/garyMamaniCortez/featureSB-RES-10-3#readme",
+  "devDependencies": {
+    "jasmine": "^3.6.1"
+  }
+}
