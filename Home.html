@@ -29,7 +29,8 @@
                     '<td>' + data.email +   '   </td>' +
                     '<td>' + data.website + '</td>' +
                     '</tr>'
-                    $('#respuesta_body').append(tr)
+                    $('#respuesta_body')
+                        .append(tr)
                 });
             return usuario;
         }
